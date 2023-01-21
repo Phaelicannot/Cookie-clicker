@@ -1,0 +1,62 @@
+#tomatoimage {
+    height: 200px;
+    margin-top: 25px;
+    margin-left: 50px;
+}
+
+#knifeimage {
+    margin-left: 10px;
+}
+.tomato-label {
+    display: block;
+    margin-top: 100px;
+    margin-left: 65px;
+    width: 150px;
+    color: white;
+    background-color: rgb(103, 18, 18);
+    padding: 10px;
+    border: 2.5px solid;
+    border-radius: 10px;
+    border-color: black;
+    text-align: center;
+}
+
+.knife-button {
+    margin-top: 50px;
+    margin-left: 15px;
+    width: 150px;
+    color: white;
+    background-color: rgb(103, 18, 18);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.blender-button {
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 150px;
+    color: white;
+    background-color: rgb(103, 18, 18);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.juicer-button {
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 150px;
+    color: white;
+    background-color: rgb(103, 18, 18);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.body {
+    background-color: rgb(122, 0, 0);
+}
+
+
+    
