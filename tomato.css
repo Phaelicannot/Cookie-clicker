@@ -5,11 +5,67 @@
 }
 
 #knifeimage {
-    margin-left: 10px;
+    margin-left: 5px;
+    margin-top: 15px;
 }
+
+#blenderimage {
+    margin-left: 2px;
+    margin-top: 10px;
+}
+
+#juicerimage {
+    margin-top: 10px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+    gap: 20px;
+}
+
+.row1 {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+
+}
+
+.buttons {
+    display: block;
+    margin-left: 65px;
+    margin-top: 10px;
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background-color: rgb(103, 18, 18);
+    padding: 10px;
+    border: 2.5px solid;
+    border-radius: 10px;
+    border-color: rgb(44, 0, 0);
+    text-align: center;
+}
+
+.upgrades {
+    display: block;
+    margin-left: 65px;
+    margin-top: 10px;
+    width: 550px;
+    height: 65px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background-color: rgb(103, 18, 18);
+    padding: 10px;
+    border: 2.5px solid;
+    border-radius: 10px;
+    border-color: rgb(44, 0, 0);
+    text-align: center;
+}
+
 .tomato-label {
     display: block;
-    margin-top: 100px;
     margin-left: 65px;
     width: 150px;
     color: white;
@@ -17,46 +73,92 @@
     padding: 10px;
     border: 2.5px solid;
     border-radius: 10px;
-    border-color: black;
+    border-color: rgb(44, 0, 0);
     text-align: center;
 }
 
+.board-button {
+    width: 550px;
+    color: white;
+    background-color: rgb(74, 12, 12);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.oil-button {
+    width: 550px;
+    color: white;
+    background-color: rgb(74, 12, 12);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.salt-button {
+    width: 550px;
+    color: white;
+    background-color: rgb(74, 12, 12);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.pepper-button {
+    width: 550px;
+    color: white;
+    background-color: rgb(74, 12, 12);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
 .knife-button {
-    margin-top: 50px;
-    margin-left: 15px;
     width: 150px;
     color: white;
-    background-color: rgb(103, 18, 18);
-    padding: 10px;
-    border-radius: 10px;
+    background-color: rgb(74, 12, 12);
+    border: none;
+    border-radius: 5px;
     text-align: center;
 }
 
 .blender-button {
-    margin-top: 10px;
-    margin-left: 15px;
     width: 150px;
     color: white;
-    background-color: rgb(103, 18, 18);
-    padding: 10px;
-    border-radius: 10px;
+    background-color: rgb(74, 12, 12);
+    border: none;
+    border-radius: 5px;
     text-align: center;
 }
 
 .juicer-button {
-    margin-top: 10px;
-    margin-left: 15px;
     width: 150px;
     color: white;
-    background-color: rgb(103, 18, 18);
-    padding: 10px;
-    border-radius: 10px;
+    background-color: rgb(74, 12, 12);
+    border: none;
+    border-radius: 5px;
     text-align: center;
 }
 
-.body {
+body {
     background-color: rgb(122, 0, 0);
 }
 
+.tomatocolumn {
+    background-color: rgb(244, 90, 59);
+    width: 300px;
+    height: 500px;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.othercolumn {
+    background-color: rgb(244, 90, 59);
+    width: 715px;
+    height: 500px;
+    padding: 50px;
+    border-radius: 20px;
+}
 
     

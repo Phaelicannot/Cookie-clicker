@@ -11,7 +11,9 @@ let blenders = 0;
 let juicers = 0;
 let blenderfactor = 50;
 let juicerfactor = 200;
-let multiplier = 1;
+let knifemultiplier = 1;
+let blendermultiplier = 1;
+let juicermultiplier = 1;
 let tomatolabel = document.querySelector(".tomato-label");
 let button = document.querySelector(".tomato-button");
 let knifebutton = document.querySelector(".knife-button");
@@ -24,6 +26,14 @@ let juicerbutton = document.querySelector(".juicer-button");
 let juicerlabel = document.querySelector(".juicer-label");
 let juicernumber = document.querySelector(".juicer-number")
 
+let boardfactor = 400;
+let oilfactor = 1000;
+let saltfactor = 5000;
+let pepperfactor = 20000;
+let boardbutton = document.querySelector(".board-button")
+let oilbutton = document.querySelector(".oil-button")
+let saltbutton = document.querySelector(".salt-button")
+let pepperbutton = document.querySelector(".pepper-button")
 
 let inventory = [];
 let inventoryList = document.querySelector(".inventory-list");
@@ -34,12 +44,16 @@ knifebutton.addEventListener("click", buyKnife);
 blenderbutton.addEventListener("click", buyBlender);
 juicerbutton.addEventListener("click", buyJuicer);
 
+boardbutton.addEventListener("click", buyBoard);
+oilbutton.addEventListener("click", buyOil);
+saltbutton.addEventListener("click", buySalt);
+
 function buyKnife() {
     if (tomatoes >= knifefactor) {
         tomatoes -= knifefactor;
         knives = knives + 1;
         knifenumber.innerHTML = knives;
-        tomatofactor = tomatofactor + 1;
+        tomatofactor = tomatofactor + 1 * knifemultiplier;
         knifefactor = Math.round(knifefactor + knifefactor*0.3);
         knifelabel.innerHTML = knifefactor;
         
@@ -55,7 +69,7 @@ function buyBlender() {
         blendernumber.innerHTML = blenders;
         blenderfactor = Math.round(blenderfactor + blenderfactor*0.3);
         blenderlabel.innerHTML = blenderfactor;
-        tomatoadder = tomatoadder + 1 * multiplier;
+        tomatoadder = tomatoadder + 1 * blendermultiplier;
         update();
     }
 }
@@ -67,8 +81,40 @@ function buyJuicer() {
         juicernumber.innerHTML = juicers;
         juicerfactor = Math.round(juicerfactor + juicerfactor*0.3);
         juicerlabel.innerHTML = juicerfactor;
-        tomatoadder = tomatoadder + 5 * multiplier;
+        tomatoadder = tomatoadder + 5 * juicermultiplier;
         update();
+    }
+}
+
+
+function addTomato() {
+    tomatoes = tomatoes + tomatofactor + 1;
+    tomatolabel.innerHTML = tomatoes;
+}
+
+function addBoard() {
+    if (tomatoes >= boardfactor) {
+        knifemultiplier = knifemultiplier * 2;
+    }
+}
+    
+
+function addOil() {
+    if (tomatoes >= oilfactor) {
+        blendermultiplier = blendermultiplier * 2;
+    }
+}
+
+function addSalt() {
+    if (tomatoes >= saltfactor) {
+        juicermultiplier = juicermultiplier * 2;
+    }
+}
+
+function addPepper() {
+    if (tomatoes >= pepperfactor) {
+        blendermultiplier = blendermultiplier * 2;
+        juicermultiplier = juicermultiplier * 2;
     }
 }
 
@@ -86,16 +132,12 @@ function updateInventory() {
     }
 }
 
-function addTomato() {
-    tomatoes = tomatoes + tomatofactor + 1;
-    tomatolabel.innerHTML = tomatoes;
-}
-
-
 setInterval(function backgroundTomato() {
     tomatoes = tomatoes + tomatoadder;
     tomatolabel.innerHTML = tomatoes;
 }, 1000)
+
+
 
 // updateInventory();
 

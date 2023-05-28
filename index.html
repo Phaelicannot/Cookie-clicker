@@ -9,34 +9,83 @@
     <link rel="stylesheet" href="tomato.css">
 </head>
 <body>
-    <div>
-        <span class="tomato-label">0</span>
-    </div>
-
-    <div>
-        <img id="tomatoimage" src="Tomato.png" onClick="addTomato()">
-    </div>
-
+    <div class="row">
+        <div class="tomatocolumn"> 
+            <div>
+                <span class="tomato-label">0</span>
+            </div>
     
-    <div>
-        <img src="knife.png" id="knifeimage" width="35px">
-        <span class="knife-number">0</span>
-        <button class="knife-button" type="button">Buy knife</button>
-        <span class="knife-label">8</span> $
-    </div>
+            <div>
+                <img id="tomatoimage" src="Tomato.png" onClick="addTomato()">
+            </div>
     
-    <div>
-        <img src="blender.png" height="45px" width="45px">
-        <span class="blender-number">0</span>
-        <button class="blender-button" type="button">Buy blender</button>
-        <span class="blender-label">50</span> $  
-    </div>
-
-    <div>
-        <img src="juicer.png" height="45px" width="45px">
-        <span class="juicer-number">0</span>
-        <button class="juicer-button" type="button">Buy juicer</button>
-        <span class="juicer-label">200</span> $     
+            <div class="row1">
+                <div class="column1">
+                    <div>
+                        <img src="knife.png" id="knifeimage" width="50px">
+                    <span class="knife-number">0</span>
+                    <span class="knife-label">8</span> $
+                    </div>
+                    <div>
+                        <img src="blender.png" id="blenderimage" width="50px">
+                        <span class="blender-number">0</span>
+                        <span class="blender-label">50</span> $  
+                    </div>
+                    <div>
+                        <img src="juicer.png" id="juicerimage" width="50px">
+                        <span class="juicer-number">0</span>
+                        <span class="juicer-label">200</span> $  
+                    </div>
+                </div>
+                
+                <div class="column1">
+                    <div>
+                        <div class="buttons">
+                            <button class="knife-button" type="button">Buy knife</button>
+                            <p>One extra $ per click</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="buttons">
+                            <button class="blender-button" type="button">Buy blender</button>
+                            <p>Plus one $ per second</p>
+                        </div>
+                    </div>
+                
+                    <div>
+                        <div class="buttons">
+                            <button class="juicer-button" type="button">Buy juicer</button>
+                            <p>Plus five $ per second</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="othercolumn">
+            <div>
+                <div class="upgrades">
+                    <button class="board-button" type="button">Buy cutting board</button>
+                    <p>Doubles knife efficiency</p>
+                    <span class="board-label">200</span> $  
+                </div>
+                <div class="upgrades">
+                    <button class="oil-button" type="button">Buy oil</button>
+                    <p>Doubles blender efficiency</p>
+                    <span class="oil-label">1000</span> $  
+                </div>
+                <div class="upgrades">
+                    <button class="salt-button" type="button">Buy salt</button>
+                    <p>Doubles juicer efficiency</p>
+                    <span class="salt-label">5000</span> $  
+                </div>
+                <div class="upgrades">
+                    <button class="pepper-button" type="button">Buy pepper</button>
+                    <p>Doubles juicer efficiency</p>
+                    <span class="salt-label">20000</span> $  
+                </div>
+            </div>
+        </div>
     </div>
 
     <ul class="inventory-list">
